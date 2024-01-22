@@ -17,4 +17,14 @@ public class HitAndBlow {
             secretNumber[i] = random.nextInt(10);
         }
     }
+    //メソッド2: ヒットの数を数える
+    public int countHits(int [] guess){
+        int hits = 0;
+        for (int i = 0; i < 3; i++) {
+            if (guess[i] == secretNumber[i]) {
+                hits++;
+            }
+        }
+        return hits;
+    }
 }
