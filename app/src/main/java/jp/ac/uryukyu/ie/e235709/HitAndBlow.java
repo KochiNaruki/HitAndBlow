@@ -1,6 +1,7 @@
 package jp.ac.uryukyu.ie.e235709;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class HitAndBlow {
     private int[] secretNumber;
@@ -39,5 +40,18 @@ public class HitAndBlow {
         }
         return blows;
         }
-    
+    //メソッド4:3桁の数字を入力
+    public int[] takeUserGuess() {
+        Scanner scanner = new Scanner(System.in);//入力処理を行う
+        int[] guess = new int[3];
+
+        System.out.print("3桁の数字を入力してください: ");
+        String input = scanner.next();//ユーザーの入力を文字列として取得
+
+        for (int i = 0; i < 3; i++) {
+            guess[i] = Character.getNumericValue(input.charAt(i));//i番目の文字を取得し、数字に変換
+        }
+
+        return guess;
+    }
 }
