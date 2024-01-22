@@ -27,4 +27,17 @@ public class HitAndBlow {
         }
         return hits;
     }
+    //メソッド3: blowの数を数える
+    public int countBlows(int [] guess){
+        int blows = 0;
+        for (int i = 0; i <3; i++){
+            for (int j = 0; j < 3; j++) {
+                if (i != j && guess[i] == secretNumber[j]) {
+                    blows++;
+                }
+            }
+        }
+        return blows;
+        }
+    
 }
