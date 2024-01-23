@@ -4,3 +4,7 @@
 git clone https://github.com/KochiNaruki/HitAndBlow.git
 cd HitAndBlow
 ```
+2.gradle run
+```bash
+gradle run
+```
