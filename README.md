@@ -1,8 +1,8 @@
 # HitAndBlow
 1.git clone
 ```bash
-git clone https://github.com/KochiNaruki/HitAndBlow.git
-cd HitAndBlow
+git clone https://github.com/KochiNaruki/report6.git
+cd report6
 ```
 2.gradle run
 ```bash
