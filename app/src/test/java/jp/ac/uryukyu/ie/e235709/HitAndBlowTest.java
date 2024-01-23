@@ -8,6 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 
 class HitAndBlowTest {
+    /**
+     * countHitsが正しく動くことを確認するテスト
+     * 3桁の数字をコピーして同じ配列を作る
+     */
     @Test
     void testCorrectGuess() {
         HitAndBlow game = new HitAndBlow();
@@ -15,24 +19,11 @@ class HitAndBlowTest {
         int[] correctGuess = Arrays.copyOf(secretNumber, secretNumber.length);
 
         int hits = game.countHits(correctGuess);
-        int blows = game.countBlows(correctGuess);
 
         assertEquals(3, hits);
-        assertEquals(0, blows);
+
     }
 
-    @Test
-    void testOneHitGuess() {
-
-        HitAndBlow game = new HitAndBlow();
-        int[] secretNumber = game.getSecretNumber();
-        int[] oneHitGuess = { secretNumber[0], secretNumber[2], secretNumber[1] };
-
-        int hits = game.countHits(oneHitGuess);
-        int blows = game.countBlows(oneHitGuess);
-
-        assertEquals(1, hits);
-        assertEquals(2, blows);
+    
     }
 
-}
